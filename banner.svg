@@ -1,0 +1,53 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Demand Forecasting Platform banner">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0E14"/>
+      <stop offset="100%" stop-color="#121726"/>
+    </linearGradient>
+    <linearGradient id="histFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="320" fill="url(#bg)"/>
+
+  <!-- subtle grid -->
+  <g stroke="#1E2433" stroke-width="1">
+    <line x1="0" y1="80" x2="1200" y2="80"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+  </g>
+
+  <!-- forecast fork motif -->
+  <g transform="translate(0,10)" opacity="0.92">
+    <path d="M 40.0,216.2 L 54.9,209.4 L 69.7,214.9 L 84.6,230.7 L 99.5,240.1 L 114.4,230.7 L 129.2,209.2 L 144.1,193.9 L 159.0,193.6 L 173.8,198.0 L 188.7,190.7 L 203.6,168.8 L 218.5,147.7 L 233.3,143.2 L 248.2,154.0 L 263.1,163.6 L 277.9,159.8 L 292.8,149.2 L 307.7,149.3 L 322.6,167.3 L 337.4,191.7 L 352.3,204.4 L 367.2,201.7 L 382.1,197.4 L 396.9,206.2 L 411.8,225.4 L 426.7,237.8 L 441.5,231.2 L 456.4,212.8 L 471.3,200.5 L 486.2,202.4 L 501.0,207.6 L 515.9,199.8 L 530.8,176.8 L 545.6,154.2 L 560.5,147.8 L 575.4,155.8 L 590.3,161.7 L 605.1,154.0 L 620.0,140.1"
+          fill="none" stroke="url(#histFade)" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <path d="M 620.0,143.5 L 641.6,153.1 L 663.2,156.7 L 684.8,164.1 L 706.4,171.7 L 728.0,168.3 L 749.6,156.4 L 771.2,148.1 L 792.8,142.1 L 814.4,129.1 L 836.0,113.1 L 857.6,106.7 L 879.2,108.5 L 900.8,107.8 L 922.4,107.1 L 944.0,116.5 L 965.6,132.4 L 987.2,142.2 L 1008.8,146.6 L 1030.4,155.2 L 1052.0,164.4 L 1073.6,162.5 L 1095.2,152.1 L 1116.8,144.8 L 1138.4,139.3 L 1160.0,126.2"
+          fill="none" stroke="#5B8DEF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+    <path d="M 620.0,145.6 L 641.6,147.7 L 663.2,159.3 L 684.8,171.9 L 706.4,162.0 L 728.0,153.6 L 749.6,152.5 L 771.2,134.3 L 792.8,117.9 L 814.4,120.5 L 836.0,116.3 L 857.6,112.2 L 879.2,129.6 L 900.8,143.1 L 922.4,145.5 L 944.0,161.0 L 965.6,171.2 L 987.2,160.5 L 1008.8,156.4 L 1030.4,153.9 L 1052.0,133.1 L 1073.6,120.2 L 1095.2,122.2 L 1116.8,113.9 L 1138.4,112.2 L 1160.0,130.6"
+          fill="none" stroke="#28C76F" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    <path d="M 620.0,142.1 L 641.6,160.9 L 663.2,202.8 L 684.8,177.2 L 706.4,182.1 L 728.0,144.7 L 749.6,109.9 L 771.2,111.7 L 792.8,85.1 L 814.4,127.4 L 836.0,143.1 L 857.6,172.4 L 879.2,208.3 L 900.8,185.7 L 922.4,196.1 L 944.0,150.2 L 965.6,125.5 L 987.2,117.8 L 1008.8,93.5 L 1030.4,137.1 L 1052.0,144.6 L 1073.6,184.7 L 1095.2,212.1 L 1116.8,196.2 L 1138.4,208.1 L 1160.0,156.6"
+          fill="none" stroke="#EA5455" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+    <path d="M 620.0,126.5 L 641.6,177.1 L 663.2,160.0 L 684.8,178.4 L 706.4,128.0 L 728.0,130.8 L 749.6,91.4 L 771.2,125.5 L 792.8,120.0 L 814.4,171.8 L 836.0,157.8 L 857.6,179.6 L 879.2,130.9 L 900.8,132.9 L 922.4,90.4 L 944.0,121.1 L 965.6,113.7 L 987.2,166.1 L 1008.8,154.9 L 1030.4,180.2 L 1052.0,133.7 L 1073.6,135.4 L 1095.2,90.1 L 1116.8,117.3 L 1138.4,107.5 L 1160.0,160.1"
+          fill="none" stroke="#EA5455" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+
+    <line x1="620" y1="60" x2="620" y2="245" stroke="#39405A" stroke-width="1.4" stroke-dasharray="4 5"/>
+    <circle cx="620" cy="140.1" r="4.5" fill="#FFFFFF"/>
+    <text x="626" y="262" fill="#6B7488" font-family="Helvetica, Arial, sans-serif" font-size="13" letter-spacing="1.5">FORECAST HORIZON →</text>
+    <text x="40" y="262" fill="#6B7488" font-family="Helvetica, Arial, sans-serif" font-size="13" letter-spacing="1.5">HISTORICAL DEMAND</text>
+  </g>
+
+  <!-- title block -->
+  <g font-family="Helvetica, Arial, sans-serif">
+    <text x="40" y="50" fill="#FFFFFF" font-size="34" font-weight="700" letter-spacing="0.2">Demand Forecasting Platform</text>
+    <text x="41" y="74" fill="#9098A8" font-size="15">ARIMA · SARIMA · Prophet · XGBoost · LightGBM · Random Forest · LSTM · GRU · BiLSTM · N-BEATS · TFT · Informer · Autoformer</text>
+  </g>
+
+  <!-- legend -->
+  <g font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#C7CCD8">
+    <circle cx="828" cy="40" r="5" fill="#5B8DEF"/><text x="840" y="44">Classical</text>
+    <circle cx="928" cy="40" r="5" fill="#28C76F"/><text x="940" y="44">Machine Learning</text>
+    <circle cx="1063" cy="40" r="5" fill="#EA5455"/><text x="1075" y="44">Deep Learning</text>
+  </g>
+</svg>

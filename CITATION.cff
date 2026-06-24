@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software or its comparative benchmark results in academic work, please cite it as below."
+title: "Comparative Study of ARIMA, LSTM, and Prophet for Demand Forecasting: A Production-Grade Forecasting Platform"
+version: 1.0.0
+date-released: "2026-06-18"
+authors:
+  - family-names: "Contributors"
+    given-names: "Demand Forecasting Platform"
+license: MIT
+repository-code: "https://github.com/OWNER/REPO"
+keywords:
+  - time-series-forecasting
+  - demand-forecasting
+  - ARIMA
+  - SARIMA
+  - Prophet
+  - LSTM
+  - XGBoost
+  - LightGBM
+  - N-BEATS
+  - Temporal-Fusion-Transformer
+  - Informer
+  - Autoformer
+  - MLOps
+  - MLflow
+  - Optuna
+  - SHAP

@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# PyTorch Lightning auto-generated logs (regenerated on every training run)
+lightning_logs/
+*.ckpt
+
+# Environment
+.env
+*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# DVC local cache (not the .dvc pointer files)
+/.dvc/cache
+/.dvc/tmp
+
+# MLflow artifact store (db + small CSVs are kept & committed for reproducibility;
+# large binary artifact dirs, if MLflow starts writing any, are excluded)
+mlflow/artifacts/
+
+# Large model checkpoints (track with DVC instead, see docs/DVC_GUIDE.md)
+models/registry/*.ckpt
+models/registry/*.pt
+models/registry/*.pkl

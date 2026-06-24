@@ -1,0 +1,11 @@
+# Example DVC remote configuration (copy into .dvc/config after `dvc init`)
+# ---------------------------------------------------------------------------
+# Local remote (good default for getting started):
+#   dvc remote add -d localremote /path/to/shared/storage
+#
+# S3:
+#   dvc remote add -d s3remote s3://your-bucket/demand-forecasting
+#   dvc remote modify s3remote region us-east-1
+#
+# GCS:
+#   dvc remote add -d gcsremote gs://your-bucket/demand-forecasting

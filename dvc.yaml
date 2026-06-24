@@ -1,0 +1,89 @@
+# DVC Pipeline Definition
+# ========================
+# Reproduce the entire data -> model -> report pipeline with:
+#   dvc repro
+#
+# Each stage's outputs are tracked by DVC so they can be versioned and
+# pushed to remote storage (S3 / GCS / Azure Blob / local) independently
+# of git, while git tracks the lightweight .dvc pointer files.
+
+stages:
+  generate_data:
+    cmd: python -m src.data.generate_datasets
+    deps:
+      - src/data/generate_datasets.py
+    outs:
+      - data/raw/retail_demand.csv
+      - data/raw/ecommerce_sales.csv
+      - data/raw/inventory_supply_chain.csv
+
+  prepare_features:
+    cmd: python -m src.data.prepare
+    deps:
+      - src/data/prepare.py
+      - data/raw/retail_demand.csv
+    outs:
+      - data/processed/primary_demand_series.csv
+
+  benchmark_models:
+    cmd: python -m experiments.run_benchmark
+    deps:
+      - experiments/run_benchmark.py
+      - src/models/registry.py
+      - src/models/classical.py
+      - src/models/ml_models.py
+      - src/models/deep_learning.py
+      - data/processed/primary_demand_series.csv
+    outs:
+      - reports/leaderboard.csv
+      - reports/predictions.csv
+    metrics:
+      - experiments/benchmark_run_log.json:
+          cache: false
+
+  hyperparameter_search:
+    cmd: python -m experiments.run_optuna_search --n_trials 30
+    deps:
+      - experiments/run_optuna_search.py
+      - data/processed/primary_demand_series.csv
+    outs:
+      - experiments/optuna_studies/xgboost_hpo_trials.csv
+      - experiments/optuna_studies/xgboost_hpo_summary.json
+
+  explainability:
+    cmd: python -m src.explainability.shap_analysis
+    deps:
+      - src/explainability/shap_analysis.py
+      - reports/leaderboard.csv
+    outs:
+      - reports/figures/shap_feature_importance.png
+      - reports/figures/shap_summary_beeswarm.png
+
+  generate_charts:
+    cmd: python -m src.reporting.generate_charts
+    deps:
+      - src/reporting/generate_charts.py
+      - reports/leaderboard.csv
+      - reports/predictions.csv
+    outs:
+      - reports/figures/leaderboard_rmse.png
+      - reports/figures/forecast_vs_actual.png
+
+  monitoring:
+    cmd: python -m src.monitoring.drift_detection
+    deps:
+      - src/monitoring/drift_detection.py
+      - reports/predictions.csv
+    outs:
+      - monitoring/drift/feature_drift_report.csv
+      - monitoring/alerts/alert_log.json
+
+  generate_reports:
+    cmd: python -m src.reporting.generate_reports
+    deps:
+      - src/reporting/generate_reports.py
+      - reports/leaderboard.csv
+      - reports/figures/leaderboard_rmse.png
+    outs:
+      - reports/pdf/executive_summary.pdf
+      - reports/pdf/model_evaluation_report.pdf

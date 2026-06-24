@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "demand-forecasting-platform"
+version = "1.0.0"
+description = "Comparative study of ARIMA, SARIMA, Prophet, ML, and deep-learning models for demand forecasting, packaged as a production-grade forecasting platform."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Demand Forecasting Platform Contributors" }]
+requires-python = ">=3.11"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+[tool.black]
+line-length = 120
+target-version = ["py311", "py312"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v"
+
+[tool.flake8]
+max-line-length = 120
+extend-ignore = ["E203", "W503"]
+
+[tool.setuptools.packages.find]
+include = ["src*", "api*"]

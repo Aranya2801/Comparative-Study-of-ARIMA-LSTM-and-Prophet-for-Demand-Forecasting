@@ -1,0 +1,5 @@
+-r requirements.txt
+jupyter>=1.0.0
+ipykernel>=6.29.0
+nbconvert>=7.16.0
+pre-commit>=3.7.0

@@ -63,7 +63,7 @@ Most "ARIMA vs LSTM vs Prophet" repos are a single notebook. This one is a
 [`research/PAPER.md`](research/PAPER.md). Regenerate with
 `python -m experiments.run_benchmark`.
 
-<img src="reports/figures/leaderboard_rmse.png" alt="Leaderboard RMSE" width="100%">
+<img src="leaderboard_rmse.png" alt="Leaderboard RMSE" width="100%">
 
 | Rank | Model | Family | RMSE | MAPE | R² | Train (s) |
 |---|---|---|---|---|---|---|
@@ -90,7 +90,7 @@ in depth — and is consistent with recent literature questioning
 transformer-scale capacity for data-scarce forecasting — in
 [`research/PAPER.md` §5](research/PAPER.md#5-discussion).
 
-<img src="reports/figures/forecast_vs_actual.png" alt="Forecast vs Actual" width="100%">
+<img src="forecast_vs_actual.png" alt="Forecast vs Actual" width="100%">
 
 ---
 
@@ -128,7 +128,7 @@ transformer-scale capacity for data-scarce forecasting — in
 
 ## 🏗️ Architecture
 
-<img src="assets/diagrams/architecture.png" alt="System Architecture" width="100%">
+<img src="architecture.png" alt="System Architecture" width="100%">
 
 Full breakdown in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md), including
 the request-flow diagram and the recursive-vs-direct forecasting pipeline
@@ -265,7 +265,7 @@ streamlit run dashboard/app.py
 | **Inventory Dashboard** | Warehouse/SKU inventory levels, reorder points, stockout risk ranking |
 | **Business KPIs** | Retail + e-commerce commercial metrics, promo uplift analysis |
 
-<img src="assets/diagrams/dashboard_mockup.png" alt="Dashboard layout mockup" width="100%">
+<img src="dashboard_mockup.png" alt="Dashboard layout mockup" width="100%">
 
 *(Illustrative layout mockup — run the app locally for the live, interactive version with real Plotly charts.)*
 
